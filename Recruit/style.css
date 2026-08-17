@@ -1,0 +1,261 @@
+:root {
+  font-family: "Noto Sans JP", "Yu Gothic", sans-serif;
+  color: #202622;
+  background: #eef0ed;
+  font-synthesis: none;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  line-height: 1.75;
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding: 22px max(24px, calc((100% - 900px) / 2));
+  color: #fff;
+  background: #17251e;
+  border-bottom: 4px solid #8ea18f;
+}
+
+.agency,
+.site-name,
+.classification { margin: 0; }
+
+.agency {
+  color: #aebbb2;
+  font: 0.68rem/1.4 monospace;
+  letter-spacing: 0.13em;
+}
+
+.site-name {
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.classification {
+  padding: 4px 10px;
+  border: 1px solid #8ea18f;
+  font-size: 0.72rem;
+}
+
+main {
+  width: min(900px, calc(100% - 32px));
+  margin: 40px auto 70px;
+  background: #fff;
+  border: 1px solid #d8dcd8;
+  box-shadow: 0 12px 30px rgba(20, 30, 24, 0.06);
+}
+
+.intro,
+.application-form { padding: 42px 56px; }
+
+.intro { border-bottom: 1px solid #dfe2df; }
+
+.document-number {
+  margin: 0;
+  color: #667068;
+  font: 0.76rem/1.4 monospace;
+  letter-spacing: 0.08em;
+}
+
+h1 {
+  margin: 8px 0 16px;
+  font-size: clamp(1.7rem, 5vw, 2.45rem);
+  line-height: 1.35;
+  letter-spacing: 0.05em;
+}
+
+.notice {
+  margin-top: 28px;
+  padding: 16px 18px;
+  background: #f4f5f2;
+  border-left: 4px solid #566f5d;
+}
+
+.notice p { margin: 3px 0 0; }
+
+fieldset {
+  min-width: 0;
+  margin: 0 0 46px;
+  padding: 0;
+  border: 0;
+}
+
+legend {
+  width: 100%;
+  margin-bottom: 24px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #273d30;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+legend span {
+  margin-right: 10px;
+  color: #66756b;
+  font: 0.82rem monospace;
+}
+
+label,
+.choice-group {
+  display: block;
+  margin-bottom: 22px;
+  font-weight: 600;
+}
+
+.required {
+  margin-left: 5px;
+  color: #a23b32;
+  font-size: 0.7rem;
+}
+
+input,
+select,
+textarea,
+button { font: inherit; }
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select,
+textarea {
+  width: 100%;
+  margin-top: 7px;
+  padding: 12px 13px;
+  color: #202622;
+  background: #fff;
+  border: 1px solid #aeb5b0;
+  border-radius: 2px;
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+  line-height: 1.65;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #355f45;
+  box-shadow: 0 0 0 3px rgba(53, 95, 69, 0.13);
+}
+
+.field-grid {
+  display: grid;
+  gap: 0 22px;
+}
+
+.two-columns { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+.question { margin: 0 0 9px; }
+
+.choices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+}
+
+.choices label,
+.agreement label {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin: 0;
+  font-weight: 400;
+}
+
+.choices.stacked,
+.agreement {
+  display: grid;
+  gap: 10px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  width: 1.1rem;
+  height: 1.1rem;
+  margin: 0.35em 0 0;
+  accent-color: #315a40;
+  flex: 0 0 auto;
+}
+
+.hint,
+.demo-note {
+  display: block;
+  margin-top: 6px;
+  color: #69716b;
+  font-size: 0.78rem;
+  font-weight: 400;
+}
+
+.agreement {
+  padding: 19px;
+  background: #f6f7f5;
+  border: 1px solid #d8ddd9;
+}
+
+.submit-area {
+  padding-top: 30px;
+  border-top: 1px solid #dfe2df;
+  text-align: center;
+}
+
+button {
+  width: min(100%, 360px);
+  margin-top: 12px;
+  padding: 14px 26px;
+  color: #fff;
+  background: #243d2d;
+  border: 1px solid #243d2d;
+  border-radius: 2px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+}
+
+button:hover { background: #31533d; }
+
+button:focus-visible {
+  outline: 3px solid #97b7a0;
+  outline-offset: 3px;
+}
+
+footer {
+  padding: 28px 20px 42px;
+  color: #6d746f;
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+footer p { margin: 2px; }
+
+@media (max-width: 680px) {
+  .site-header {
+    align-items: flex-start;
+    padding: 18px 20px;
+  }
+
+  .classification { white-space: nowrap; }
+
+  main {
+    width: 100%;
+    margin: 0;
+    border: 0;
+    box-shadow: none;
+  }
+
+  .intro,
+  .application-form { padding: 34px 22px; }
+
+  .two-columns { grid-template-columns: 1fr; }
+
+  .choices { display: grid; }
+}
