@@ -1,0 +1,110 @@
+:root {
+  color-scheme: light;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans JP", sans-serif;
+  color: #202020;
+  background: #f4f4f1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  line-height: 1.8;
+}
+
+.memo {
+  width: min(820px, calc(100% - 32px));
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 64px 72px 120px;
+  background: #fff;
+}
+
+.memo-header {
+  padding-bottom: 28px;
+  border-bottom: 1px solid #d8d8d2;
+}
+
+.label,
+.updated {
+  margin: 0;
+  color: #777;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+}
+
+h1 {
+  margin: 8px 0 4px;
+  font-size: clamp(1.55rem, 4vw, 2.1rem);
+  line-height: 1.4;
+}
+
+section {
+  padding: 34px 0;
+  border-bottom: 1px solid #e8e8e3;
+}
+
+h2 {
+  margin: 0 0 16px;
+  font-size: 1.15rem;
+}
+
+h3 {
+  margin: 24px 0 6px;
+  font-size: 1rem;
+}
+
+p,
+ul {
+  margin: 8px 0;
+}
+
+ul {
+  padding-left: 1.4em;
+}
+
+.note-block {
+  margin-top: 14px;
+  padding: 2px 20px 18px;
+  border-left: 3px solid #d2d2cc;
+}
+
+.timeline {
+  margin: 0;
+}
+
+.timeline div {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 16px;
+  padding: 10px 0;
+}
+
+.timeline dt {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.timeline dd {
+  margin: 0;
+}
+
+.free-note {
+  min-height: 180px;
+  padding: 18px;
+  background: #fafaf7;
+}
+
+@media (max-width: 640px) {
+  .memo {
+    width: 100%;
+    padding: 36px 22px 80px;
+  }
+
+  .timeline div {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
