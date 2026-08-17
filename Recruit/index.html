@@ -34,7 +34,7 @@
         <!-- actionに送信先URLを設定すると、実際にデータを送信できます。 -->
         <form class="application-form"
             action="https://docs.google.com/forms/d/e/1FAIpQLSflsqnhhiZARDOVQxyRQXzQWjRK-QvaQ6HX_3WSPaaCM357rg/formResponse"
-            method="POST"　target="_blank" >
+            method="POST"　target="hidden_iframe">
             <fieldset>
                 <legend><span>01</span> 基本情報</legend>
 
@@ -79,15 +79,7 @@
                     </select>
                 </label>
 
-                <div class="choice-group">
-                    <p class="question">希望する勤務区分 <span class="required">必須</span></p>
-                    <div class="choices">
-                        <label><input type="radio" name="entry.311519188" value="research" required> 研究職</label>
-                        <label><input type="radio" name="entry.311519188" value="field"> 現地任務職</label>
-                        <label><input type="radio" name="entry.311519188" value="technical"> 技術職</label>
-                        <label><input type="radio" name="entry.311519188" value="unspecified"> 指定なし</label>
-                    </div>
-                </div>
+                
 
                 <label>
                     最終学歴・専攻
