@@ -34,7 +34,7 @@
         <!-- actionに送信先URLを設定すると、実際にデータを送信できます。 -->
         <form class="application-form"
             action="https://docs.google.com/forms/d/e/1FAIpQLSflsqnhhiZARDOVQxyRQXzQWjRK-QvaQ6HX_3WSPaaCM357rg/formResponse"
-            method="POST">
+            method="POST" target="hidden_iframe">
             <fieldset>
                 <legend><span>01</span> 基本情報</legend>
 
@@ -179,12 +179,46 @@
                 <p class="demo-note">※これは架空サイト用のフォームです。</p>
             </div>
         </form>
+
+
+        <iframe name="hidden_iframe" id="hidden_iframe" title="送信結果" style="display: none;"></iframe>
+
+        <div id="submit-success" class="submit-success" hidden>
+            <p class="success-code">APPLICATION ACCEPTED</p>
+            <h2>申請を受理しました</h2>
+            <p>
+                受付番号を発行しました。審査結果が確定するまで、
+                本申請に関する情報を第三者へ開示しないでください。
+            </p>
+        </div>
     </main>
 
     <footer>
         <p>国立未知生物研究所 人事管理局</p>
         <p>文書識別番号：HR-RCT-07</p>
     </footer>
+    <script>
+        const applicationForm = document.querySelector(".application-form");
+        const hiddenIframe = document.querySelector("#hidden_iframe");
+        const successMessage = document.querySelector("#submit-success");
+
+        let formSubmitted = false;
+
+        applicationForm.addEventListener("submit", () => {
+            formSubmitted = true;
+        });
+
+        hiddenIframe.addEventListener("load", () => {
+            if (!formSubmitted) return;
+
+            applicationForm.hidden = true;
+            successMessage.hidden = false;
+            successMessage.scrollIntoView({
+                behavior: "smooth",
+                block: "center"
+            });
+        });
+    </script>
 </body>
 
 </html>

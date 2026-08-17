@@ -259,3 +259,37 @@ footer p { margin: 2px; }
 
   .choices { display: grid; }
 }
+.submit-success {
+  margin: 0 56px 56px;
+  padding: 38px;
+  color: #203126;
+  background: #f3f7f3;
+  border: 1px solid #9eaea2;
+  border-left: 5px solid #315a40;
+}
+
+.submit-success[hidden] {
+  display: none;
+}
+
+.submit-success h2 {
+  margin: 6px 0 12px;
+  font-size: 1.5rem;
+}
+
+.submit-success p {
+  margin: 0;
+}
+
+.submit-success .success-code {
+  color: #607066;
+  font: 0.75rem/1.4 monospace;
+  letter-spacing: 0.14em;
+}
+
+@media (max-width: 680px) {
+  .submit-success {
+    margin: 0 22px 40px;
+    padding: 26px 22px;
+  }
+}
