@@ -1,0 +1,236 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Hiragino Kaku Gothic ProN",
+    "Yu Gothic",
+    "Meiryo",
+    sans-serif;
+  background: #f4f6f5;
+  color: #26332f;
+  line-height: 1.9;
+}
+
+/* ====================
+   ヘッダー
+==================== */
+
+header {
+  background: #1f3830;
+  color: #ffffff;
+  padding: 70px 20px 60px;
+  text-align: center;
+}
+
+header .label {
+  font-size: 13px;
+  letter-spacing: 0.2em;
+  opacity: 0.7;
+  margin-bottom: 15px;
+}
+
+header h1 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(38px, 8vw, 64px);
+  font-weight: normal;
+  letter-spacing: 0.05em;
+}
+
+header p {
+  margin: 20px 0 0;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* ====================
+   ナビゲーション
+==================== */
+
+nav {
+  background: #ffffff;
+  border-bottom: 1px solid #dde3df;
+  text-align: center;
+  padding: 14px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav a {
+  color: #53635d;
+  text-decoration: none;
+  margin: 0 18px;
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: #1f3830;
+}
+
+/* ====================
+   メイン
+==================== */
+
+main {
+  max-width: 850px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+/* ====================
+   この日記について
+==================== */
+
+.intro {
+  background: #ffffff;
+  padding: 35px;
+  margin-bottom: 45px;
+  border-left: 4px solid #718c80;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+}
+
+.intro h2 {
+  margin-top: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: normal;
+  color: #1f3830;
+}
+
+/* ====================
+   日記
+==================== */
+
+.diary {
+  background: #ffffff;
+  padding: 40px;
+  margin-bottom: 30px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.diary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+}
+
+.date {
+  color: #718c80;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  margin-bottom: 8px;
+}
+
+.diary h2 {
+  margin: 0 0 20px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 27px;
+  font-weight: normal;
+  color: #1f3830;
+}
+
+.diary p {
+  margin: 12px 0;
+}
+
+/* ====================
+   引用
+==================== */
+
+.quote {
+  margin: 25px 0;
+  padding: 20px 25px;
+  background: #f3f6f4;
+  border-left: 3px solid #718c80;
+  color: #53635d;
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+}
+
+/* ====================
+   タグ
+==================== */
+
+.tag {
+  display: inline-block;
+  margin-top: 20px;
+  margin-right: 5px;
+  padding: 4px 12px;
+  border: 1px solid #cbd6d1;
+  color: #64756e;
+  font-size: 12px;
+  border-radius: 20px;
+  background: #ffffff;
+}
+
+/* ====================
+   フッター
+==================== */
+
+footer {
+  margin-top: 80px;
+  background: #1f3830;
+  color: #ffffff;
+  text-align: center;
+  padding: 35px 20px;
+  font-size: 12px;
+  opacity: 0.95;
+}
+
+/* ====================
+   スマホ対応
+==================== */
+
+@media (max-width: 600px) {
+
+  header {
+    padding: 55px 20px 45px;
+  }
+
+  header h1 {
+    font-size: 40px;
+  }
+
+  nav {
+    padding: 12px 5px;
+  }
+
+  nav a {
+    margin: 0 8px;
+    font-size: 12px;
+  }
+
+  main {
+    margin: 35px auto;
+    padding: 0 15px;
+  }
+
+  .intro,
+  .diary {
+    padding: 25px;
+  }
+
+  .diary h2 {
+    font-size: 23px;
+  }
+
+  .diary {
+    margin-bottom: 20px;
+  }
+
+  footer {
+    margin-top: 50px;
+  }
+}
