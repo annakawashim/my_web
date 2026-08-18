@@ -124,6 +124,7 @@ h3 {
   background-image: url("Image/top_image.jpg");
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
 }
 
 .hero-subtitle {
