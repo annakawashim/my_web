@@ -121,7 +121,9 @@ h3 {
   align-items: center;
   min-height: 100vh;
   padding-top: 70px;
-  background-image: url("image/top_image.jpg");
+  background-image: url("Image/top_image.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 .hero-subtitle {
